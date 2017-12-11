@@ -2,6 +2,10 @@ PFont Font1;
 int menubarx = 0;
 int menubary = 50;
 
+color injured = color(0);
+color healed = color(0, 200, 0);
+color stimpak = color(0, 150, 0);
+
 String healthPoints = "HP 57/135";
 
 void setup()
