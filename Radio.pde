@@ -20,6 +20,16 @@ void radio()
    text(":", width/4 + 2*width/39, height - 18);
    text(minutes, width/4 + 2*width/40 + width/100, height - 18);
    text(seconds, width/4 + 3*width/40 + width/60, height - 18);   
+   
+   //Display Radio Waves
+   fill(0, 200, 0, 20);
+   rect(width/2 - width/100, height/3, width/2 + width/100, height/3);
+   fill(255, 255, 0);
+   for(int i=0; i<width/diam+10; i++)
+   {
+     ellipse(width/2 + 4*i*diam, amp*sin(frq*(t+i))+height/2, diam, diam);
+    }
+    t += dt;   
   
    stroke(255, 255, 0, 100);
    line(width/2 - width/100, 2*height/3, width, 2*height/3);

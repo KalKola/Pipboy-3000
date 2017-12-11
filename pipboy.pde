@@ -5,6 +5,13 @@ int menubary = 50;
 int state = 1;
 int radioState = 6;
 
+float t = 0.0;
+float dt = .1;
+int diam = 2;
+float amp = 50.0;
+float frq = 0.0;
+
+
 color injured = color(0);
 color healed = color(0, 200, 0);
 color stimpak = color(0, 150, 0);
