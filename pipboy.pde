@@ -378,7 +378,7 @@ void mousePressed()
         {
            radioState = 3;
            tempfrq = 0.9;
-           amp = 30;
+           amp = 5;
            menuInv.rewind();
            menuInv.play();
            radio = minim.loadFile("Music/Radio4.mp3");
@@ -391,7 +391,7 @@ void mousePressed()
            radioState = 4;
            menuInv.rewind();
            menuInv.play();
-           radio = minim.loadFile("Music/Radio4.mp3");
+           radio = minim.loadFile("Music/Radio5.mp3");
         }
         if(mouseX>5 && mouseX<width/10 && mouseY>height-height/8 && mouseY<(height-height/8)+height/22)
         {
