@@ -146,4 +146,51 @@ void mousePressed()
      }
    }   
   
+    if(mousePressed)
+    {
+      if(state == 3)
+      {
+        if(mouseX>width/26 && mouseX<width/26 + 320 && 
+           mouseY>height/4 + height/40 && mouseY<height/4 + height/40 + height/12)
+        {
+           radioState = 0;
+           frq = 0.4;
+           amp = 50;
+        }
+        if(mouseX>width/26 && mouseX<width/26 + 320 && 
+           mouseY>height/4 + height/40 + height/9 && mouseY<height/4 + 2*height/40 + 2*height/12)
+        {
+           radioState = 1;
+           frq = 0.2;
+           amp = 70;
+        }
+        if(mouseX>width/26 && mouseX<width/26 + 320 && 
+           mouseY>height/4 + 5*height/25 + height/30 && mouseY<height/4 + 5*height/25 + 3*height/30)
+        {
+           radioState = 2;
+           frq = 0.3;
+           amp = 20;
+        }
+        if(mouseX>width/26 && mouseX<width/26 + 320 && 
+           mouseY>height/4 + height/40 + height/3 && mouseY<height/4 + 4*height/40 + 4*height/12)
+        {
+           radioState = 3;
+           frq = 0.9;
+           amp = 30;
+        }
+        if(mouseX>width/26 && mouseX<width/26 + 320 && 
+           mouseY>height/2 + height/5 && mouseY<460)
+        {
+           frq = .2;
+           amp = 40;
+           radioState = 4;
+        }
+        if(mouseX>5 && mouseX<(height - height/8) && mouseY>height-height/8 && mouseY<(height-height/8)+height/22)
+        {
+          frq = 0;
+        }
+         
+      }
+    }
+  
 }
