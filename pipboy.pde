@@ -100,5 +100,19 @@ void mousePressed()
          state = 5;
        }
    }  
+   
+   //Function for Healing Limb
+   if(mousePressed)
+   {
+     if(state == 1)
+     {
+        if(mouseX>width/2 + width/6 && mouseX<width/2 + width/6 + 50
+           && mouseY>height/2 + height/4 && mouseY<height/2 + height/4 +20)
+           {
+             injured = healed;
+             healthPoints = "HP 135/135";
+           }
+     }
+   }   
   
 }
