@@ -1,3 +1,12 @@
+/*                                          [-- INVENTORY --]
+          ----------------------------------------------------------------------------------------
+          This Page Contains the inv() Function: Displays a list of all inventory items, organised
+                                                 into a submenu which can be navigates using the
+                                                 1 - 4 keys. Item(s) in the Equip Menu can be
+                                                 'equiped' by clicking the relavant button.
+          ----------------------------------------------------------------------------------------
+*/
+
 void inv()
 {
    //Change Menu Bar Position

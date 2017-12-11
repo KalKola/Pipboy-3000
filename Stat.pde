@@ -1,3 +1,12 @@
+/*                                           [-- STAT --]
+          ----------------------------------------------------------------------------------------
+          This Page Contains the stat() Function: Displays current limb condition, healing supplies
+                                                  and a gif of the Vault Boy walking. Limbs can
+                                                  be healed by clicking on the relavant button,
+                                                  which will consume a Stimpak.
+          ----------------------------------------------------------------------------------------
+*/
+
 void stat()
 {
    //Change Menu Bar Position

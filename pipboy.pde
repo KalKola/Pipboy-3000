@@ -1,3 +1,20 @@
+/*
+          ----------------------------------------------------------------------------------------
+                                            Kalyan Kola Cahill
+                                            C16357813 - DT228
+                                        Object Oriented Programming
+          ----------------------------------------------------------------------------------------  
+
+                                                [-- MAIN --]
+          ----------------------------------------------------------------------------------------
+          This Page Contains the setup() fuction : Loads Sound Files, Gifs, and Images.
+                                 draw() function : Calls the other menu functions based on
+                                                   what switch statement has been selected.
+                                 time() function : Uses hour(), minute(), and second() to 
+                                                   store current time in variables.
+                                 mousePressed() function: For menu functionality.
+          ----------------------------------------------------------------------------------------
+*/
 
 void setup()
 {
@@ -75,7 +92,15 @@ void draw()
    }
 }
 
-
+/*
+                                                 [-- NOTE --]
+          ----------------------------------------------------------------------------------------
+          The menu has been hardcoded, but this is purposeful. I have demonstrated throughout this
+          program that I know how to use relative scale (ie: using width/height) however on the 
+          menu, scaling it results in an unappealing look, and overcomplex code. With this in mind
+          I chose to leave the menu hardcoded, but most everything in this program is scalable. :)
+          ----------------------------------------------------------------------------------------
+*/
 void topMenu()
 {
   //Displaying Menu Bar
@@ -143,7 +168,14 @@ void statscreate()
 }
 
 
-
+/*
+                                                 [-- NOTE --]
+          ----------------------------------------------------------------------------------------
+          As I mentioned, the top menu is hardcoded, and as such the mousePressed function for the
+          top menu also uses hardcoded values. However, all other mousePressed functions use 
+          relative/scalable values.
+          ----------------------------------------------------------------------------------------
+*/
 void mousePressed()
 {
    //Top Menu function
@@ -314,69 +346,63 @@ void mousePressed()
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + height/40 && mouseY<height/4 + height/40 + height/12)
         {
-           minim.stop();
            radioState = 0;
-           frq = 0.4;
+           tempfrq = 0.4;
            amp = 50;
            menuInv.rewind();
            menuInv.play();
            radio = minim.loadFile("Music/Radio1.mp3");
-           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + height/40 + height/9 && mouseY<height/4 + 2*height/40 + 2*height/12)
         {
-           minim.stop();
            radioState = 1;
-           frq = 0.2;
+           tempfrq = 0.2;
            amp = 70;
            menuInv.rewind();
            menuInv.play();
            radio = minim.loadFile("Music/Radio2.mp3");
-           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + 5*height/25 + height/30 && mouseY<height/4 + 5*height/25 + 3*height/30)
         {
-           minim.stop();
            radioState = 2;
-           frq = 0.3;
+           tempfrq = 0.3;
            amp = 20;
            menuInv.rewind();
            menuInv.play();
            radio = minim.loadFile("Music/Radio3.mp3");
-           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + height/40 + height/3 && mouseY<height/4 + 4*height/40 + 4*height/12)
         {
-           minim.stop();
            radioState = 3;
-           frq = 0.9;
+           tempfrq = 0.9;
            amp = 30;
            menuInv.rewind();
            menuInv.play();
            radio = minim.loadFile("Music/Radio4.mp3");
-           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/2 + height/5 && mouseY<460)
         {
-           minim.stop();
-           frq = .2;
+           tempfrq = .2;
            amp = 40;
            radioState = 4;
            menuInv.rewind();
            menuInv.play();
            radio = minim.loadFile("Music/Radio4.mp3");
-           radio.play();
         }
-        if(mouseX>5 && mouseX<(height - height/8) && mouseY>height-height/8 && mouseY<(height-height/8)+height/22)
+        if(mouseX>5 && mouseX<width/10 && mouseY>height-height/8 && mouseY<(height-height/8)+height/22)
         {
-          minim.stop();
           frq = 0;
+          radio.close();
         }
-         
+        if(mouseX>width/6 && mouseX<width/10 + width/6 && mouseY>height-height/8 && mouseY<(height-height/8) + height/22)
+        {
+          frq = tempfrq;
+          radio.play();        
+        }
       }
     }
     

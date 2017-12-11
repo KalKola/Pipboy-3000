@@ -1,3 +1,10 @@
+/*                                         [-- VARIABLES --]
+          ----------------------------------------------------------------------------------------
+          This page contains all of the global variables for the pipboy program. I have organised
+          these into sections, such as Classes, States, Strings, Sounds, ect.
+          ----------------------------------------------------------------------------------------
+*/
+
 //Importing Processing Functions
 import gifAnimation.*;
 import ddf.minim.*;
@@ -58,6 +65,7 @@ float dt = .1;
 int diam = 2;
 float amp = 50.0;
 float frq = 0.0;
+float tempfrq = 0.0;
 
 //Declaring Date Variables
 int d = day();

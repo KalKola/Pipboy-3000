@@ -1,3 +1,11 @@
+/*                                           [-- DATA --]
+          ----------------------------------------------------------------------------------------
+          This Page Contains the Data() Function: Displays a functional list where you can view
+                                                             details about each character stat,
+                                                             along with Gifs related to each stat.
+          ----------------------------------------------------------------------------------------
+*/
+
 void data()
 {
   //Change Menu Bar Position

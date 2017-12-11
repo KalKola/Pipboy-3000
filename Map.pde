@@ -1,3 +1,13 @@
+/*                                           [-- MAP --]
+          ----------------------------------------------------------------------------------------
+          This Page Contains the mapp() Function: Displays a map with a grid overlay. While the 
+                                                  mouse is hovered over the grid, the mouseX and
+                                                  mouseY co-ordinates are displayed, and if a
+                                                  preset area is selected, the area name is 
+                                                  printed.
+          ----------------------------------------------------------------------------------------
+*/
+
 void mapp()
 {
   //Change Menu Bar Position

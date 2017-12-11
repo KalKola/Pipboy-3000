@@ -1,3 +1,10 @@
+/*                                           [-- CLASSES --]
+          ----------------------------------------------------------------------------------------
+          This Page Contains the Button() Class: creating the inventory button objects.
+                                 Stat() Class: creating the Data menu stats.
+          ----------------------------------------------------------------------------------------
+*/
+
 class Button
 {
   float xpos;

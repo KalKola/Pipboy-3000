@@ -1,3 +1,13 @@
+/*                                           [-- RADIO --]
+          ----------------------------------------------------------------------------------------
+          This Page Contains the radio() Function: Displays a list of radio stations, which when
+                                                   selected, will play 1 of 6 possible sound files
+                                                   as well as changing the frequency of the sin
+                                                   graph. An off button allows you to stop the 
+                                                   sound file and set the frequency to 0.0
+          ----------------------------------------------------------------------------------------
+*/
+
 void radio()
 {
    //Change Menu Bar Position
@@ -71,7 +81,9 @@ void radio()
   
     //Off Button
     rect(5, height - height/8, width/10, height/22, 6);
+    rect(width/6, height - height/8, width/10, height/22, 6);
     fill(0, 200, 0);
     text("Off", 15, height - height/11);
+    text("On", 5 + width/6, height - height/11);
   
 }
