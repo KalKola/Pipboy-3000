@@ -1,13 +1,8 @@
-/*                                         [-- VARIABLES --]
-          ----------------------------------------------------------------------------------------
-          This page contains all of the global variables for the pipboy program. I have organised
-          these into sections, such as Classes, States, Strings, Sounds, ect.
-          ----------------------------------------------------------------------------------------
-*/
-
+//Importing Processing Functions
 import gifAnimation.*;
 import ddf.minim.*;
 
+//Declaring Gifs
 Gif myAnimation;
 Gif dataAnimation1;
 Gif dataAnimation2;
@@ -17,6 +12,7 @@ Gif dataAnimation5;
 Gif dataAnimation6;
 Gif dataAnimation7;
 
+//Declaring Sounds
 Minim minim;
 AudioPlayer heal;
 AudioPlayer menu;
@@ -25,6 +21,7 @@ AudioPlayer menuInv2;
 AudioPlayer equip;
 AudioPlayer radio;
 
+//Declaring Images
 PImage img;
 PImage weight;
 PImage money;
@@ -32,6 +29,7 @@ PImage gear;
 PImage thing;
 PImage mapimg;
 
+//Declaring State Variables
 int state = 1;
 int invState = 1;
 int invAllState = 0;
@@ -39,6 +37,8 @@ int invJunkState = 0;
 int invEquipState = 0;
 int radioState = 6;
 int dataState = 0;
+
+//Declaring Misc Variables
 int menubarx = 0;
 int menubary = 50;
 int stimpacksLow = 0;
@@ -48,21 +48,29 @@ color injured = color(0);
 color healed = color(0, 200, 0);
 color stimpak = color(0, 150, 0);
 
+//Declaring Classes
 Button[] buttons = new Button[6];
 Stat[] stats = new Stat[7];
 
+//Declaring Radio Variables
 float t = 0.0;
 float dt = .1;
 int diam = 2;
 float amp = 50.0;
 float frq = 0.0;
+
+//Declaring Date Variables
 int d = day();
 int m = month();
 int y = year();
 String date;
+
+//Declaring Time Variables
 int seconds;
 int minutes;
 int hours;
+
+//Creating Strings
 String healthPoints = "HP 57/135";
 String stimpacks = "STIMPAK (1)";
 String StatTextString = "";

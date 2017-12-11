@@ -1,5 +1,6 @@
 void mapp()
 {
+  //Change Menu Bar Position
   menubarx = 400;
   
   //Create Bot Menu Stats
@@ -9,6 +10,11 @@ void mapp()
   text("Washington DC, Arlington", 4*width/14, height - 18);
   noStroke();
   
+  //Displaying Map
+  tint(255, 126);
+  image(mapimg, width/8, height/6, width/2, height/2 + height/6);
+  
+  //Map Grid Overlay
   stroke(0, 100, 0);
   for(int i=width/8;i<width-5*width/16;i+=width/16)
   {

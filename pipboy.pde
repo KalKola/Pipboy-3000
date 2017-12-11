@@ -4,8 +4,8 @@ void setup()
   size(800, 600);
   background(0);
   frameRate(30);
-  statscreate();  
   buttoncreate();
+  statscreate();
   
   //Creating Font
   Font1 = createFont("Arial Bold", 20);
@@ -49,7 +49,7 @@ void setup()
 }
 
 void draw()
-{
+{  
   background(0);
   topMenu();
   botMenu();
@@ -75,15 +75,23 @@ void draw()
    }
 }
 
+
 void topMenu()
 {
+  //Displaying Menu Bar
   stroke(0, 200, 0);
   line(5, menubary, 795, menubary);
   noStroke();
   textFont(Font1);
   fill(0, 200, 0);
   text("STATS            INV           RADIO            MAP            DATA", 70, 40);
-
+  
+  //Displaying Menu Images
+  fill(0, 100, 0);
+  image(gear, 10, 10, 30, 30);
+  image(thing, 760, 10, 30, 30);
+  
+  //Displaying Menu Selection
   stroke(0);
   line(menubarx, menubary, menubarx + 90, menubary);
   stroke(0, 200, 0);
@@ -91,11 +99,12 @@ void topMenu()
   line(menubarx + 90, menubary, menubarx + 90, menubary - 20);
   line(menubarx, menubary - 20, menubarx + 5, menubary - 20);
   line(menubarx + 90, menubary - 20, menubarx + 85, menubary - 20);
-  
 }
+
 
 void botMenu()
 {
+   //Displaying Bottom Menu Bar
    noStroke();
    fill(0, 100, 0);                 
    rect(5, height - height/15, width/4, height/19);
@@ -112,14 +121,6 @@ void time()
   seconds = second();
 }
 
-void statscreate()
-{
-  //Creating Data Items Class Objects
-  for(int j = 0;j<7;j++)
-  {
-    stats[j] = new Stat (10, height/5 + j*height/14);
-  }
-}
 
 void buttoncreate()
 {
@@ -131,6 +132,18 @@ void buttoncreate()
   }
 }
 
+
+void statscreate()
+{
+  //Creating Data Items Class Objects
+  for(int j = 0;j<7;j++)
+  {
+    stats[j] = new Stat (10, height/5 + j*height/14);
+  }
+}
+
+
+
 void mousePressed()
 {
    //Top Menu function
@@ -139,25 +152,36 @@ void mousePressed()
        if(mouseX>70 && mouseX<140 && mouseY>25 && mouseY<40)
        {
          state = 1;
+         menu.rewind();
+         menu.play();
        }
        if(mouseX>200 && mouseX<230 && mouseY>25 && mouseY<40)
        {
          state = 2;
+         menu.rewind();
+         menu.play();
        }
        if(mouseX>300 && mouseX<350 && mouseY>25 && mouseY<40)
        {
          state = 3;
+         menu.rewind();
+         menu.play();
        }
        if(mouseX>420 && mouseX<480 && mouseY>25 && mouseY<40)
        {
          state = 4;
+         menu.rewind();
+         menu.play();
        }
        if(mouseX>530 && mouseX<590 && mouseY>25 && mouseY<40)
        {
          state = 5;
+         menu.rewind();
+         menu.play();
        }
-   }  
-   
+   }
+    
+ 
    //Function for Healing Limb
    if(mousePressed)
    {
@@ -168,10 +192,121 @@ void mousePressed()
            {
              injured = healed;
              healthPoints = "HP 135/135";
+             stimpacks = "STIMPAK (0)";
+             stimpacksLow = 1;
+             heal.rewind();
+             heal.play();
            }
      }
-   }   
-  
+   }
+    
+    //Inventory All Item Selection
+    if(mousePressed)
+    {
+      if(state==2 && invState==1)
+      {
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 && mouseY<height/5 + height/14)
+        {
+          invAllState = 0;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + height/14 && mouseY<height/5 + 2*height/14)
+        {
+          invAllState = 1;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 2*height/14 && mouseY<height/5 + 3*height/14)
+        {
+          invAllState = 2;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 3*height/14 && mouseY<height/5 + 4*height/14)
+        {
+          invAllState = 3;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 4*height/14 && mouseY<height/5 + 5*height/14)
+        {
+          invAllState = 4;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 5*height/14 && mouseY<height/5 + 6*height/14)
+        {
+          invAllState = 5;
+          menuInv.rewind();
+          menuInv.play();
+        }
+      }
+    }
+    
+    
+    //Inventory JUNK Item Selection
+    if(mousePressed)
+    {
+      if(state==2 && invState==4)
+      {
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 && mouseY<height/5 + height/14)
+        {
+          invJunkState = 0;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + height/14 && mouseY<height/5 + 2*height/14)
+        {
+          invJunkState = 1;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 2*height/14 && mouseY<height/5 + 3*height/14)
+        {
+          invJunkState = 2;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 3*height/14 && mouseY<height/5 + 4*height/14)
+        {
+          invJunkState = 3;
+          menuInv.rewind();
+          menuInv.play();
+        }
+      }
+    }
+    
+    
+    //Inventory EQUIP Item Selection
+    if(mousePressed)
+    {
+      if(mouseX>25+width/10 && mouseX<25 + (3*width/5) - width/30 && mouseY>height - height/8 && mouseY<height - height/8 + height/22)
+      {
+        if((invState == 1 && invAllState == 3)||(invState == 2))
+        {
+            if(invEquipState == 0)
+            {
+              invEquipState = 1;
+              equipItem = "UNEQUIP";
+              allItems[3] = "Pipe Rifle (E)";
+              equip.rewind();
+              equip.play();
+            }
+            else 
+            {
+              invEquipState = 0;
+              equipItem = "EQUIP";
+              allItems[3] = "Pipe Rifle";
+              equip.rewind();
+              equip.play();
+            }
+        }
+      }
+      
+    }
+    
+    //Function for Selecting Radio Station
     if(mousePressed)
     {
       if(state == 3)
@@ -179,44 +314,121 @@ void mousePressed()
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + height/40 && mouseY<height/4 + height/40 + height/12)
         {
+           minim.stop();
            radioState = 0;
            frq = 0.4;
            amp = 50;
+           menuInv.rewind();
+           menuInv.play();
+           radio = minim.loadFile("Music/Radio1.mp3");
+           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + height/40 + height/9 && mouseY<height/4 + 2*height/40 + 2*height/12)
         {
+           minim.stop();
            radioState = 1;
            frq = 0.2;
            amp = 70;
+           menuInv.rewind();
+           menuInv.play();
+           radio = minim.loadFile("Music/Radio2.mp3");
+           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + 5*height/25 + height/30 && mouseY<height/4 + 5*height/25 + 3*height/30)
         {
+           minim.stop();
            radioState = 2;
            frq = 0.3;
            amp = 20;
+           menuInv.rewind();
+           menuInv.play();
+           radio = minim.loadFile("Music/Radio3.mp3");
+           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/4 + height/40 + height/3 && mouseY<height/4 + 4*height/40 + 4*height/12)
         {
+           minim.stop();
            radioState = 3;
            frq = 0.9;
            amp = 30;
+           menuInv.rewind();
+           menuInv.play();
+           radio = minim.loadFile("Music/Radio4.mp3");
+           radio.play();
         }
         if(mouseX>width/26 && mouseX<width/26 + 320 && 
            mouseY>height/2 + height/5 && mouseY<460)
         {
+           minim.stop();
            frq = .2;
            amp = 40;
            radioState = 4;
+           menuInv.rewind();
+           menuInv.play();
+           radio = minim.loadFile("Music/Radio4.mp3");
+           radio.play();
         }
         if(mouseX>5 && mouseX<(height - height/8) && mouseY>height-height/8 && mouseY<(height-height/8)+height/22)
         {
+          minim.stop();
           frq = 0;
         }
          
       }
     }
+    
+    
+    //Data Menu Stats Selection
+    if(mousePressed)
+    {
+      if(state==5)
+      {
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 && mouseY<height/5 + height/14)
+        {
+          dataState = 0;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + height/14 && mouseY<height/5 + 2*height/14)
+        {
+          dataState = 1;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 2*height/14 && mouseY<height/5 + 3*height/14)
+        {
+          dataState = 2;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 3*height/14 && mouseY<height/5 + 4*height/14)
+        {
+          dataState = 3;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 4*height/14 && mouseY<height/5 + 5*height/14)
+        {
+          dataState = 4;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 5*height/14 && mouseY<height/5 + 6*height/14)
+        {
+          dataState = 5;
+          menuInv.rewind();
+          menuInv.play();
+        }
+        if(mouseX>10 && mouseX<width/2 && mouseY>height/5 + 6*height/14 && mouseY<height/5 + 7*height/14)
+        {
+          dataState = 6;
+          menuInv.rewind();
+          menuInv.play();
+        }
+      }
+    } 
   
-}
+}//End MousePressed Function

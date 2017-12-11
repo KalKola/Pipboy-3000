@@ -38,7 +38,6 @@ class Button
   
 }
 
-
 class Stat
 {
   float xpos;

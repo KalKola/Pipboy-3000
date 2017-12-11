@@ -2,7 +2,7 @@ void radio()
 {
    //Change Menu Bar Position
    menubarx = 280;
-   
+ 
    //Create Bottom Menu Stats - Date
    textSize(20);
    fill(0, 200, 0);
@@ -19,8 +19,8 @@ void radio()
    text(hours, width/4 + width/40, height - 18);
    text(":", width/4 + 2*width/39, height - 18);
    text(minutes, width/4 + 2*width/40 + width/100, height - 18);
-   text(seconds, width/4 + 3*width/40 + width/60, height - 18);   
-   
+   text(seconds, width/4 + 3*width/40 + width/60, height - 18);
+ 
    //Display Radio Waves
    fill(0, 200, 0, 20);
    rect(width/2 - width/100, height/3, width/2 + width/100, height/3);
@@ -29,7 +29,7 @@ void radio()
    {
      ellipse(width/2 + 4*i*diam, amp*sin(frq*(t+i))+height/2, diam, diam);
     }
-    t += dt;   
+    t += dt;
   
    stroke(255, 255, 0, 100);
    line(width/2 - width/100, 2*height/3, width, 2*height/3);
