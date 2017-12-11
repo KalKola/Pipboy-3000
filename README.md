@@ -32,7 +32,17 @@ Creating a mousePressed function that was both efficient, and based on relative 
 and without a doubt took the most amount of time in creating this program, but I believe I found the
 perfect balance.
 
+<a href="https://www.youtube.com/watch?v=4nQ_2AmbCyc&feature=youtube">Video Demo</a>
+
+**Instructions for use:**
+Most menu options simple involve clicking on each option, however in the inventory 
+screen there is a submenu which can be navigated by clicking 1 - 4 on the keyboard. On the radio menu
+click on the radio station you desire, and then click on. Remember to turn one station off before you try 
+to access another.
+
 ![](http://www.reactiongifs.com/r/pcpt.gif)
 
 Rare footage of ~~Patrick Star~~ Chief Programmer<br>Implementing Complex Algorithm
+
+
 
