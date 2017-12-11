@@ -4,7 +4,8 @@ void setup()
   size(800, 600);
   background(0);
   frameRate(30);
-  statscreate();
+  statscreate();  
+  buttoncreate();
   
   //Creating Font
   Font1 = createFont("Arial Bold", 20);
@@ -117,6 +118,16 @@ void statscreate()
   for(int j = 0;j<7;j++)
   {
     stats[j] = new Stat (10, height/5 + j*height/14);
+  }
+}
+
+void buttoncreate()
+{
+  //Creating Inventory Button Class Objects
+  for(int j = 0;j<6;j++)
+  {
+    buttons[j] = new Button (10, height/5 + j*height/14, itemAllSelection[j], 
+    itemWeight[j], itemValue[j], allItems[j]);
   }
 }
 
