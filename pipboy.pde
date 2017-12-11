@@ -1,36 +1,3 @@
-PFont Font1;
-int menubarx = 0;
-int menubary = 50;
-
-int state = 1;
-int radioState = 6;
-
-float t = 0.0;
-float dt = .1;
-int diam = 2;
-float amp = 50.0;
-float frq = 0.0;
-
-
-color injured = color(0);
-color healed = color(0, 200, 0);
-color stimpak = color(0, 150, 0);
-
-String healthPoints = "HP 57/135";
-String radioStation[] = {"Enclave Radio",
-                         "Galaxy News Radio",
-                         "Outcast Distress Signal",
-                         "Recon Craft Theta Beacon",
-                         "Wernher's Distress Signl"};
-                         
-                         
-int d = day();
-int m = month();
-int y = year();
-String date;
-int seconds;
-int minutes;
-int hours;
 
 void setup()
 {
