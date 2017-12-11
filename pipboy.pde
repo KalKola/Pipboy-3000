@@ -15,6 +15,15 @@ String radioStation[] = {"Enclave Radio",
                          "Outcast Distress Signal",
                          "Recon Craft Theta Beacon",
                          "Wernher's Distress Signl"};
+                         
+                         
+int d = day();
+int m = month();
+int y = year();
+String date;
+int seconds;
+int minutes;
+int hours;
 
 void setup()
 {
@@ -30,6 +39,7 @@ void draw()
   background(0);
   topMenu();
   botMenu();
+  time();
   
   switch(state)
   {
@@ -79,6 +89,14 @@ void botMenu()
    rect(15 + 3*width/4, height - height/15, width/4 - 20, height/19);      
 }
 
+
+void time()
+{
+  //Displaying Current Time
+  hours = hour();
+  minutes = minute();
+  seconds = second();
+}
 
 void mousePressed()
 {

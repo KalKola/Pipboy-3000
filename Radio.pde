@@ -1,7 +1,25 @@
 void radio()
 {
    //Change Menu Bar Position
-   menubarx = 280; 
+   menubarx = 280;
+   
+   //Create Bottom Menu Stats - Date
+   textSize(20);
+   fill(0, 200, 0);
+   date = String.valueOf(m);
+   text(date, width/40, height - 18);
+   text(".", width/34 + width/40, height - 18);
+   date = String.valueOf(d);
+   text(date, width/22 + width/60, height - 18);
+   text(".", 3*width/40, height - 18);
+   date = String.valueOf(y);
+   text(date, 3*width/40 + width/80, height - 18);
+ 
+   //Create Bottom Menu Stats - Time
+   text(hours, width/4 + width/40, height - 18);
+   text(":", width/4 + 2*width/39, height - 18);
+   text(minutes, width/4 + 2*width/40 + width/100, height - 18);
+   text(seconds, width/4 + 3*width/40 + width/60, height - 18);   
   
    stroke(255, 255, 0, 100);
    line(width/2 - width/100, 2*height/3, width, 2*height/3);
