@@ -34,4 +34,16 @@ void mapp()
     text(currX, 2*width/3 + width/36, height/3 + height/6);
     text(currY, 2*width/3 + width/8, height/3 + height/6);
   }
+  if(mouseX>250 &&mouseX<300 && mouseY>300 && mouseY<350)
+  {
+    text("Arlington Park", 2*width/3 + width/100, 3*height/5);
+  }
+  if(mouseX>400 &&mouseX<450 && mouseY>250 && mouseY<300)
+  {
+    text("Lake Arbor", 2*width/3 + width/100, 3*height/5);
+  }
+  if(mouseX>200 &&mouseX<250 && mouseY>200 && mouseY<250)
+  {
+    text("Potomac", 2*width/3 + width/100, 3*height/5);
+  }
 }
