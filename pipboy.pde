@@ -3,9 +3,47 @@ void setup()
 {
   size(800, 600);
   background(0);
+  frameRate(30);
   
-  
+  //Creating Font
   Font1 = createFont("Arial Bold", 20);
+  
+  //Passing Sound to Minim
+  minim = new Minim(this);
+  
+  //Loading Sounds
+  heal = minim.loadFile("Sounds/heal.mp3");
+  menu = minim.loadFile("Sounds/menu.wav");
+  menuInv = minim.loadFile("Sounds/inventory.wav");
+  menuInv2 = minim.loadFile("Sounds/inventory2.mp3");
+  equip = minim.loadFile("Sounds/equip.wav");
+  
+  //Loading Gifs
+  myAnimation = new Gif(this, "Gifs/stats.gif");
+  myAnimation.play(); 
+  dataAnimation1 = new Gif(this, "Gifs/data1.gif");
+  dataAnimation1.play(); 
+  dataAnimation2 = new Gif(this, "Gifs/data2.gif");
+  dataAnimation2.play();
+  dataAnimation3 = new Gif(this, "Gifs/data3.gif");
+  dataAnimation3.play(); 
+  dataAnimation4 = new Gif(this, "Gifs/data4.gif");
+  dataAnimation4.play(); 
+  dataAnimation5 = new Gif(this, "Gifs/data5.gif");
+  dataAnimation5.play(); 
+  dataAnimation6 = new Gif(this, "Gifs/data6.gif");
+  dataAnimation6.play();
+  dataAnimation7 = new Gif(this, "Gifs/data7.gif");
+  dataAnimation7.play();
+  
+  //Loading Images
+  img = loadImage("Images/crafting.jpg");
+  weight = loadImage("Images/inventory_weight.png");
+  money = loadImage("Images/inventory.png");
+  gear = loadImage("Images/gears.png");
+  thing = loadImage("Images/thing.png");
+  mapimg = loadImage("Images/map.jpg");
+  
 }
 
 void draw()
