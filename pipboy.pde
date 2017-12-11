@@ -1,6 +1,8 @@
 PFont Font1;
-int menubarx = 60;
+int menubarx = 0;
 int menubary = 50;
+
+String healthPoints = "HP 57/135";
 
 void setup()
 {
@@ -16,6 +18,7 @@ void draw()
   background(0);
   topMenu();
   botMenu();
+  stat();
 }
 
 void topMenu()
