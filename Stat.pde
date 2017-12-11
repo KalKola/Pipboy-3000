@@ -23,4 +23,13 @@ void stat()
   fill(0, 60, 0);
   textSize(22);
   text("PERKS", 300, 80);  
+  
+  stroke(0, 200, 0);
+  fill(0);
+  rect(width/2 + width/6, height/2 + height/4, 50, 20, 4);  //left leg
+  fill(0, 200, 0);
+  rect(width/2, height/5, 50, 20, 4);  //head
+  rect(width/4, height/2, 50, 20, 4);  //right arm
+  rect(width/4, height/2 + height/4, 50, 20, 4); //right leg
+  rect(width/2 + width/6, height/2, 50, 20, 4); //left arm  
 }
