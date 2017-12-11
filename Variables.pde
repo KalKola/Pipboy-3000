@@ -48,6 +48,7 @@ color injured = color(0);
 color healed = color(0, 200, 0);
 color stimpak = color(0, 150, 0);
 
+Stat[] stats = new Stat[7];
 
 float t = 0.0;
 float dt = .1;

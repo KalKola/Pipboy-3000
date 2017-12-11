@@ -4,6 +4,7 @@ void setup()
   size(800, 600);
   background(0);
   frameRate(30);
+  statscreate();
   
   //Creating Font
   Font1 = createFont("Arial Bold", 20);
@@ -108,6 +109,15 @@ void time()
   hours = hour();
   minutes = minute();
   seconds = second();
+}
+
+void statscreate()
+{
+  //Creating Data Items Class Objects
+  for(int j = 0;j<7;j++)
+  {
+    stats[j] = new Stat (10, height/5 + j*height/14);
+  }
 }
 
 void mousePressed()
